@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  SportApp
+
+  Created by Max Khizhniakov on 02.12.2020.
+  
+*/
+
+"or" = "or";
+"haveAccount" = "Already have an account?";
+"signInFB" = "Continue with Facebook";
+"signInApple" = "Continue with Apple";
+"signInMail" = "Register";
+"signIn" = "Sign in";
+"registration" = "Registration";
