@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88317AC4257B747F004EF553 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88317AC3257B747F004EF553 /* RegisterService.swift */; };
+		88317AC7257B8D29004EF553 /* ConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88317AC6257B8D29004EF553 /* ConnectionService.swift */; };
+		88317ACB257B933F004EF553 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88317ACA257B933F004EF553 /* NetworkService.swift */; };
+		88317AD0257B9E59004EF553 /* ConnectionErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88317ACF257B9E59004EF553 /* ConnectionErrorViewController.swift */; };
+		88497406257BC3D5001EAC2A /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497405257BC3D5001EAC2A /* UserDefaultsService.swift */; };
 		88AA2D8425778AA4002B0DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA2D8325778AA4002B0DD9 /* AppDelegate.swift */; };
 		88AA2D8D25778AA5002B0DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88AA2D8C25778AA5002B0DD9 /* Assets.xcassets */; };
 		88AA2D9025778AA5002B0DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AA2D8E25778AA5002B0DD9 /* LaunchScreen.storyboard */; };
@@ -34,12 +39,21 @@
 		88AA2E09257810E1002B0DD9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 88AA2E08257810E1002B0DD9 /* FirebaseAuth */; };
 		88AA2E0B257810E1002B0DD9 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 88AA2E0A257810E1002B0DD9 /* FirebaseDatabase */; };
 		88AA2E152578157A002B0DD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88AA2E142578157A002B0DD9 /* GoogleService-Info.plist */; };
-		88AA2E1D25781710002B0DD9 /* RegistreContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA2E1C25781710002B0DD9 /* RegistreContract.swift */; };
+		88AA2E1D25781710002B0DD9 /* RegisterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA2E1C25781710002B0DD9 /* RegisterContract.swift */; };
 		88AA2E2225781763002B0DD9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA2E2125781763002B0DD9 /* RegisterViewController.swift */; };
 		88AA2E2625781799002B0DD9 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA2E2525781799002B0DD9 /* RegisterPresenter.swift */; };
+		88AA2E4F257A42F7002B0DD9 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA2E4E257A42F7002B0DD9 /* RegistrationView.swift */; };
+		88AA2E53257A7966002B0DD9 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA2E52257A7966002B0DD9 /* PrivacyViewController.swift */; };
+		88AA2E56257A7BED002B0DD9 /* UITapGesture+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA2E55257A7BED002B0DD9 /* UITapGesture+Ex.swift */; };
+		88AA2E5A257A99B8002B0DD9 /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA2E59257A99B8002B0DD9 /* String+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88317AC3257B747F004EF553 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		88317AC6257B8D29004EF553 /* ConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionService.swift; sourceTree = "<group>"; };
+		88317ACA257B933F004EF553 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		88317ACF257B9E59004EF553 /* ConnectionErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionErrorViewController.swift; sourceTree = "<group>"; };
+		88497405257BC3D5001EAC2A /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		88AA2D8025778AA4002B0DD9 /* SportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AA2D8325778AA4002B0DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88AA2D8C25778AA5002B0DD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,9 +80,13 @@
 		88AA2DF62577F200002B0DD9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		88AA2DF92577F260002B0DD9 /* UIButton+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ex.swift"; sourceTree = "<group>"; };
 		88AA2E142578157A002B0DD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		88AA2E1C25781710002B0DD9 /* RegistreContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistreContract.swift; sourceTree = "<group>"; };
+		88AA2E1C25781710002B0DD9 /* RegisterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterContract.swift; sourceTree = "<group>"; };
 		88AA2E2125781763002B0DD9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		88AA2E2525781799002B0DD9 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		88AA2E4E257A42F7002B0DD9 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		88AA2E52257A7966002B0DD9 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		88AA2E55257A7BED002B0DD9 /* UITapGesture+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGesture+Ex.swift"; sourceTree = "<group>"; };
+		88AA2E59257A99B8002B0DD9 /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +105,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88317AC1257B738A004EF553 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				88317ACA257B933F004EF553 /* NetworkService.swift */,
+				88317AC3257B747F004EF553 /* RegisterService.swift */,
+				88317AC6257B8D29004EF553 /* ConnectionService.swift */,
+				88497405257BC3D5001EAC2A /* UserDefaultsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		88317ACE257B9E41004EF553 /* ConnectionError */ = {
+			isa = PBXGroup;
+			children = (
+				88317ACF257B9E59004EF553 /* ConnectionErrorViewController.swift */,
+			);
+			path = ConnectionError;
+			sourceTree = "<group>";
+		};
+		88497403257BB7CA001EAC2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88497409257BCB69001EAC2A /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
 		88AA2D7725778AA4002B0DD9 = {
 			isa = PBXGroup;
 			children = (
@@ -106,8 +157,10 @@
 		88AA2D8225778AA4002B0DD9 /* SportApp */ = {
 			isa = PBXGroup;
 			children = (
+				88497403257BB7CA001EAC2A /* Model */,
 				88AA2D8325778AA4002B0DD9 /* AppDelegate.swift */,
 				88AA2DAB2577918F002B0DD9 /* Modules */,
+				88317AC1257B738A004EF553 /* Services */,
 				88AA2D9D25778D4E002B0DD9 /* Navigation */,
 				88AA2D9A25778ACD002B0DD9 /* Recources */,
 				88AA2D9925778AC3002B0DD9 /* Supporting files */,
@@ -154,7 +207,9 @@
 			children = (
 				88AA2DC025779C94002B0DD9 /* Login */,
 				88AA2E1725781673002B0DD9 /* Registre */,
+				88497409257BCB69001EAC2A /* Steps */,
 				88AA2DAD2577919B002B0DD9 /* Main */,
+				88317ACE257B9E41004EF553 /* ConnectionError */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -226,6 +281,8 @@
 				88AA2DDD2577B66C002B0DD9 /* UIView+Ex.swift */,
 				88AA2DF02577E789002B0DD9 /* UILabel+Ex.swift */,
 				88AA2DF92577F260002B0DD9 /* UIButton+Ex.swift */,
+				88AA2E55257A7BED002B0DD9 /* UITapGesture+Ex.swift */,
+				88AA2E59257A99B8002B0DD9 /* String+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -233,7 +290,8 @@
 		88AA2E1725781673002B0DD9 /* Registre */ = {
 			isa = PBXGroup;
 			children = (
-				88AA2E1C25781710002B0DD9 /* RegistreContract.swift */,
+				88AA2E51257A7952002B0DD9 /* Privacy */,
+				88AA2E1C25781710002B0DD9 /* RegisterContract.swift */,
 				88AA2E1F2578174C002B0DD9 /* View */,
 				88AA2E2025781751002B0DD9 /* Presenter */,
 			);
@@ -244,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				88AA2E2125781763002B0DD9 /* RegisterViewController.swift */,
+				88AA2E4E257A42F7002B0DD9 /* RegistrationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,6 +313,14 @@
 				88AA2E2525781799002B0DD9 /* RegisterPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88AA2E51257A7952002B0DD9 /* Privacy */ = {
+			isa = PBXGroup;
+			children = (
+				88AA2E52257A7966002B0DD9 /* PrivacyViewController.swift */,
+			);
+			path = Privacy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,19 +412,28 @@
 				88AA2DB0257791A8002B0DD9 /* MainContract.swift in Sources */,
 				88AA2DB3257791FB002B0DD9 /* MainPresenter.swift in Sources */,
 				88AA2D9F25778D6E002B0DD9 /* Router.swift in Sources */,
+				88317AC7257B8D29004EF553 /* ConnectionService.swift in Sources */,
 				88AA2DF42577F1B0002B0DD9 /* Colors.swift in Sources */,
-				88AA2E1D25781710002B0DD9 /* RegistreContract.swift in Sources */,
+				88317ACB257B933F004EF553 /* NetworkService.swift in Sources */,
+				88AA2E1D25781710002B0DD9 /* RegisterContract.swift in Sources */,
+				88497406257BC3D5001EAC2A /* UserDefaultsService.swift in Sources */,
+				88317AD0257B9E59004EF553 /* ConnectionErrorViewController.swift in Sources */,
 				88AA2DCB25779D79002B0DD9 /* LoginPresenter.swift in Sources */,
+				88317AC4257B747F004EF553 /* RegisterService.swift in Sources */,
 				88AA2DF12577E789002B0DD9 /* UILabel+Ex.swift in Sources */,
+				88AA2E53257A7966002B0DD9 /* PrivacyViewController.swift in Sources */,
 				88AA2D8425778AA4002B0DD9 /* AppDelegate.swift in Sources */,
 				88AA2E2625781799002B0DD9 /* RegisterPresenter.swift in Sources */,
 				88AA2DC825779D18002B0DD9 /* LoginViewController.swift in Sources */,
 				88AA2DA525778FE3002B0DD9 /* Assembly.swift in Sources */,
 				88AA2DA8257790EA002B0DD9 /* MainViewController.swift in Sources */,
 				88AA2DFA2577F260002B0DD9 /* UIButton+Ex.swift in Sources */,
+				88AA2E4F257A42F7002B0DD9 /* RegistrationView.swift in Sources */,
 				88AA2DD92577B424002B0DD9 /* Fonts.swift in Sources */,
 				88AA2E2225781763002B0DD9 /* RegisterViewController.swift in Sources */,
+				88AA2E56257A7BED002B0DD9 /* UITapGesture+Ex.swift in Sources */,
 				88AA2DCE2577A76F002B0DD9 /* Assets.swift in Sources */,
+				88AA2E5A257A99B8002B0DD9 /* String+Ex.swift in Sources */,
 				88AA2DDE2577B66C002B0DD9 /* UIView+Ex.swift in Sources */,
 				88AA2DC225779CB0002B0DD9 /* LoginContract.swift in Sources */,
 			);
@@ -513,7 +589,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PYXQK42C65;
 				INFOPLIST_FILE = "SportApp/Supporting files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -534,7 +610,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PYXQK42C65;
 				INFOPLIST_FILE = "SportApp/Supporting files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

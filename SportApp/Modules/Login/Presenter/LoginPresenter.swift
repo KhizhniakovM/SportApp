@@ -12,16 +12,18 @@ final class LoginPresenter: LoginPresenterProtocol {
     // MARK: - Properties
     weak var view: LoginViewProtocol?
     var router: RouterProtocol
+    var networkService: NetworkServiceProtocol
     
     // MARK: - Initializer
-    required init(view: LoginViewProtocol, router: RouterProtocol) {
+    required init(view: LoginViewProtocol, router: RouterProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
         self.router = router
+        self.networkService = networkService
     }
     
     // MARK: - Methods
     func tapEmailButton() {
-        router.push(destination: .register)
+        router.push(destination: .register(networkService: networkService))
     }
     func tapFbButton() {
         

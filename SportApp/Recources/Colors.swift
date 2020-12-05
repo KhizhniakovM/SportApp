@@ -11,4 +11,6 @@ extension UIColor {
     static let fb: UIColor = UIColor(named: "fb") ?? UIColor()
     static let mail: UIColor = UIColor(named: "mail") ?? UIColor()
     static let buttonText: UIColor = UIColor(named: "colorText") ?? UIColor()
+    static let gray: UIColor = UIColor(named: "gray") ?? UIColor()
+    static let error: UIColor = UIColor(named: "error") ?? UIColor()
 }

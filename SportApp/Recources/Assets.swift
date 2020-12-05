@@ -13,6 +13,7 @@ enum Assets: String {
     case logoFb
     case logoApple
     case back
+    case exit
     
     func image() -> UIImage? {
         return UIImage(named: self.rawValue)

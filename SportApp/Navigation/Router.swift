@@ -13,16 +13,20 @@ protocol RouterMain {
 }
 
 protocol RouterProtocol: RouterMain {
-    func initialViewController()
+    func loginViewController(with networkService: NetworkServiceProtocol)
+    func mainViewController(with networkService: NetworkServiceProtocol)
     func push(destination viewControllers: ViewControllers)
+    func presentConnectionError()
     func pop()
+    func dismiss()
     func popToRoot()
 }
 
 // MARK: - Enum of vc
 enum ViewControllers {
     case main
-    case register
+    case register(networkService: NetworkServiceProtocol)
+    case privacy
 }
 
 // MARK: - Implementation
@@ -38,10 +42,15 @@ class Router: RouterProtocol {
     }
     
     // MARK: - Methods
-    func initialViewController() {
+    func loginViewController(with networkService: NetworkServiceProtocol) {
         guard let navigationController = navigationController else { return }
-        guard let loginViewController = assembly?.createLogin(router: self) else { return }
+        guard let loginViewController = assembly?.createLogin(router: self, networkService: networkService) else { return }
         navigationController.viewControllers = [loginViewController]
+    }
+    func mainViewController(with networkService: NetworkServiceProtocol) {
+//        guard let navigationController = navigationController else { return }
+//        guard let loginViewController = assembly?.createLogin(router: self, networkService: networkService) else { return }
+//        navigationController.viewControllers = [loginViewController]
     }
     func push(destination viewControllers: ViewControllers) {
         guard let assembly = assembly else { return }
@@ -50,17 +59,31 @@ class Router: RouterProtocol {
         switch viewControllers {
         case .main:
             viewController = assembly.createMain(router: self)
-        case .register:
-            viewController = assembly.createRegister(router: self)
+        case .register(let networkService):
+            viewController = assembly.createRegister(router: self, networkService: networkService)
+        case .privacy:
+            viewController = assembly.createPrivacy()
+            navigationController?.present(viewController, animated: true, completion: nil)
+            return
         }
         
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
     func pop() {
         navigationController?.popViewController(animated: true)
+    }
+    func dismiss() {
+        navigationController?.dismiss(animated: true, completion: nil)
     }
     func popToRoot() {
         guard let navigationController = navigationController else { return }
         navigationController.popToRootViewController(animated: true)
+    }
+    func presentConnectionError() {
+        guard let navigationController = navigationController else { return }
+        guard let connectionErrorViewController = assembly?.createConnectionError() else { return }
+        connectionErrorViewController.modalPresentationStyle = .fullScreen
+        navigationController.present(connectionErrorViewController, animated: true, completion: nil)
     }
 }

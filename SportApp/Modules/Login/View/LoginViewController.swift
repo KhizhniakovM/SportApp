@@ -84,6 +84,7 @@ final class LoginViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupNavigationBar()
         addSubviews()
         setupUI()
     }
@@ -99,8 +100,12 @@ final class LoginViewController: UIViewController {
         self.view.addSubview(buttonStack)
         self.view.addSubview(signInStack)
     }
+    private func setupNavigationBar() {
+        guard let navigationBar = self.navigationController?.navigationBar else { return }
+        navigationBar.isHidden = true
+        navigationBar.alpha = 0
+    }
     private func setupUI() {
-        self.navigationController?.navigationBar.isHidden = true
         let width = UIScreen.main.bounds.width
         let height = UIScreen.main.bounds.height
         

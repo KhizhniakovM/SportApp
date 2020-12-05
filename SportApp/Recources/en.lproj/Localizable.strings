@@ -13,3 +13,20 @@
 "signInMail" = "Register";
 "signIn" = "Sign in";
 "registration" = "Registration";
+"regName" = "Full name";
+"regMail" = "Email";
+"regPass" = "Password";
+"regMailError" = "Enter a valid email address";
+"regPassError" = "Password lenght must be 8 to 20 symbols";
+"privacyLabel" = "By continuing you agree with our \nPrivacy Policy";
+"privacy" = "Privacy Policy";
+"continue" = "Continue";
+"errorMain" = "Connection error";
+"errorDesc" = "Sorry, we couldn't load the page. Please check the connection and try again.";
+"errorTry" = "Try again";
+"errorReg" = "Error";
+"errorRegDesc" = "Oh no! There is some error with your registration. Please try again later.";
+"cancel" = "Cancel";
+
+
+
