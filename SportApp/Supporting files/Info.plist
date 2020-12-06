@@ -24,6 +24,8 @@
 	<array>
 		<string>Roboto-Regular.ttf</string>
 		<string>Commissioner-Medium.ttf</string>
+		<string>Roboto-Light.ttf</string>
+		<string>Roboto-Medium.ttf</string>
 	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>

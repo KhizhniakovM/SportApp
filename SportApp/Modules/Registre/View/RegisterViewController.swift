@@ -22,7 +22,7 @@ final class RegisterViewController: UIViewController {
         button.setTitle(NSLocalizedString("continue", comment: ""), for: .normal)
         button.titleLabel?.textColor = .white
         button.backgroundColor = .black
-        button.titleLabel?.font = Font.main.make(15)
+        button.titleLabel?.font = Font.mainRegular.make(15)
         button.isEnabled = false
         button.alpha = 0.5
         return button

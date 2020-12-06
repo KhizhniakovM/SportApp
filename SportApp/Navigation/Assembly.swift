@@ -13,6 +13,7 @@ protocol AssemblyProtocol {
     func createLogin(router: RouterProtocol, networkService: NetworkServiceProtocol) -> UIViewController
     func createRegister(router: RouterProtocol, networkService: NetworkServiceProtocol) -> UIViewController
     func createPrivacy() -> UIViewController
+    func createSteps() -> UIViewController
     
     func createNetworkService() -> NetworkServiceProtocol
     func createRegisterService() -> RegisterServiceProtocol
@@ -44,6 +45,10 @@ class Assembly: AssemblyProtocol {
         let presenter = MainPresenter(view: view, router: router)
         view.presenter = presenter
         return view
+    }
+    func createSteps() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Steps", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "stepOne") as! UINavigationController
     }
     // MARK: - Services
     func createNetworkService() -> NetworkServiceProtocol {

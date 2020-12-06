@@ -7,6 +7,9 @@
 */
 
 "or" = "or";
+"continue" = "Continue";
+"cancel" = "Cancel";
+
 "haveAccount" = "Already have an account?";
 "signInFB" = "Continue with Facebook";
 "signInApple" = "Continue with Apple";
@@ -20,13 +23,51 @@
 "regPassError" = "Password lenght must be 8 to 20 symbols";
 "privacyLabel" = "By continuing you agree with our \nPrivacy Policy";
 "privacy" = "Privacy Policy";
-"continue" = "Continue";
+
 "errorMain" = "Connection error";
 "errorDesc" = "Sorry, we couldn't load the page. Please check the connection and try again.";
 "errorTry" = "Try again";
 "errorReg" = "Error";
 "errorRegDesc" = "Oh no! There is some error with your registration. Please try again later.";
-"cancel" = "Cancel";
 
+"stepOne" = "Step 1 from 7";
+"stepTwo" = "Step 2 from 7";
+"stepThree" = "Step 3 from 7";
+"stepFour" = "Step 4 from 7";
+"stepFive" = "Step 5 from 7";
+"stepSix" = "Step 6 from 7";
+"stepSeven" = "Step 7 from 7";
 
+"stepOneQuestion" = "How old are you?";
+"stepTwoQuestion" = "What is your weight?";
+"stepThreeQuestion" = "What is your height?";
+"stepFourQuestion" = "Choose your goal";
+"stepFiveQuestion" = "Choose your gender";
+"stepSixQuestion" = "Evaluate your body";
+"stepSevenQuestion" = "How often do you train?";
 
+"purposeHealthName" = "Health";
+"purposeMuscleName" = "Muscles";
+"purposeWeightName" = "Lose weight";
+"purposeHealthDesc" = "Improve your tone and feel healthier";
+"purposeMuscleDesc" = "Improve your tone and feel healthier";
+"purposeWeightDesc" = "Improve your tone and feel healthier";
+
+"genderFemale" = "Female";
+"genderMale" = "Male";
+
+"weightThinName" = "Thin";
+"weightThinDesc" = "Improve your tone and feel healthier";
+"weightMediumName" = "Medium";
+"weightMediumDesc" = "Improve your tone and feel healthier";
+"weightFatName" = "Fat";
+"weightFatDesc" = "Improve your tone and feel healthier";
+
+"beginner" = "Beginner";
+"advanced" = "Advanced";
+
+"levelStartDescription" = "Ooh.. I haven't started training yet";
+"levelBeginnerDescription" = "I train 1 time a week";
+"levelMediumDescription" = "I train 2-3 times a week";
+"levelAdvancedDescription" = "I train 4-5 times a week";
+"levelProDescription" = "I train 6-7 times a week";

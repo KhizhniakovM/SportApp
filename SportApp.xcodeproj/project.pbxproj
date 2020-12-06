@@ -7,11 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881CEA05257CFD4D00764AF5 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881CEA04257CFD4D00764AF5 /* UIViewController+Ex.swift */; };
+		881CEA08257D021A00764AF5 /* StepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881CEA07257D021A00764AF5 /* StepThreeViewController.swift */; };
+		881CEA0B257D0BAC00764AF5 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881CEA0A257D0BAC00764AF5 /* UserData.swift */; };
+		881CEA0E257D0F6B00764AF5 /* StepFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881CEA0D257D0F6B00764AF5 /* StepFourViewController.swift */; };
+		881CEA11257D104100764AF5 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 881CEA10257D104100764AF5 /* Roboto-Medium.ttf */; };
+		881CEA14257D1E9B00764AF5 /* StepFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881CEA13257D1E9B00764AF5 /* StepFiveViewController.swift */; };
+		881CEA17257D288500764AF5 /* StepSixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881CEA16257D288500764AF5 /* StepSixViewController.swift */; };
+		881CEA1A257D2C3D00764AF5 /* StepSevenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881CEA19257D2C3D00764AF5 /* StepSevenViewController.swift */; };
 		88317AC4257B747F004EF553 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88317AC3257B747F004EF553 /* RegisterService.swift */; };
 		88317AC7257B8D29004EF553 /* ConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88317AC6257B8D29004EF553 /* ConnectionService.swift */; };
 		88317ACB257B933F004EF553 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88317ACA257B933F004EF553 /* NetworkService.swift */; };
 		88317AD0257B9E59004EF553 /* ConnectionErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88317ACF257B9E59004EF553 /* ConnectionErrorViewController.swift */; };
 		88497406257BC3D5001EAC2A /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497405257BC3D5001EAC2A /* UserDefaultsService.swift */; };
+		8849740C257CDBBC001EAC2A /* StepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8849740B257CDBBC001EAC2A /* StepOneViewController.swift */; };
+		8849741C257CE0E1001EAC2A /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8849741B257CE0E1001EAC2A /* UserInfo.swift */; };
+		88497420257CE597001EAC2A /* Steps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8849741F257CE597001EAC2A /* Steps.storyboard */; };
+		88497425257CE891001EAC2A /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88497424257CE891001EAC2A /* Roboto-Light.ttf */; };
+		88497428257CF2A1001EAC2A /* StepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497427257CF2A1001EAC2A /* StepTwoViewController.swift */; };
 		88AA2D8425778AA4002B0DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA2D8325778AA4002B0DD9 /* AppDelegate.swift */; };
 		88AA2D8D25778AA5002B0DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88AA2D8C25778AA5002B0DD9 /* Assets.xcassets */; };
 		88AA2D9025778AA5002B0DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AA2D8E25778AA5002B0DD9 /* LaunchScreen.storyboard */; };
@@ -49,11 +62,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		881CEA04257CFD4D00764AF5 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
+		881CEA07257D021A00764AF5 /* StepThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepThreeViewController.swift; sourceTree = "<group>"; };
+		881CEA0A257D0BAC00764AF5 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		881CEA0D257D0F6B00764AF5 /* StepFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFourViewController.swift; sourceTree = "<group>"; };
+		881CEA10257D104100764AF5 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		881CEA13257D1E9B00764AF5 /* StepFiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFiveViewController.swift; sourceTree = "<group>"; };
+		881CEA16257D288500764AF5 /* StepSixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepSixViewController.swift; sourceTree = "<group>"; };
+		881CEA19257D2C3D00764AF5 /* StepSevenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepSevenViewController.swift; sourceTree = "<group>"; };
 		88317AC3257B747F004EF553 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		88317AC6257B8D29004EF553 /* ConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionService.swift; sourceTree = "<group>"; };
 		88317ACA257B933F004EF553 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		88317ACF257B9E59004EF553 /* ConnectionErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionErrorViewController.swift; sourceTree = "<group>"; };
 		88497405257BC3D5001EAC2A /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		8849740B257CDBBC001EAC2A /* StepOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOneViewController.swift; sourceTree = "<group>"; };
+		8849741B257CE0E1001EAC2A /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		8849741F257CE597001EAC2A /* Steps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Steps.storyboard; sourceTree = "<group>"; };
+		88497424257CE891001EAC2A /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		88497427257CF2A1001EAC2A /* StepTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwoViewController.swift; sourceTree = "<group>"; };
 		88AA2D8025778AA4002B0DD9 /* SportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AA2D8325778AA4002B0DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88AA2D8C25778AA5002B0DD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +153,8 @@
 		88497403257BB7CA001EAC2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8849741B257CE0E1001EAC2A /* UserInfo.swift */,
+				881CEA0A257D0BAC00764AF5 /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,8 +162,24 @@
 		88497409257BCB69001EAC2A /* Steps */ = {
 			isa = PBXGroup;
 			children = (
+				8849741F257CE597001EAC2A /* Steps.storyboard */,
+				88497414257CDDD6001EAC2A /* View */,
 			);
 			path = Steps;
+			sourceTree = "<group>";
+		};
+		88497414257CDDD6001EAC2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8849740B257CDBBC001EAC2A /* StepOneViewController.swift */,
+				88497427257CF2A1001EAC2A /* StepTwoViewController.swift */,
+				881CEA07257D021A00764AF5 /* StepThreeViewController.swift */,
+				881CEA0D257D0F6B00764AF5 /* StepFourViewController.swift */,
+				881CEA13257D1E9B00764AF5 /* StepFiveViewController.swift */,
+				881CEA16257D288500764AF5 /* StepSixViewController.swift */,
+				881CEA19257D2C3D00764AF5 /* StepSevenViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		88AA2D7725778AA4002B0DD9 = {
@@ -270,7 +314,9 @@
 			isa = PBXGroup;
 			children = (
 				88AA2DD22577B3E0002B0DD9 /* Commissioner-Medium.ttf */,
+				88497424257CE891001EAC2A /* Roboto-Light.ttf */,
 				88AA2DD52577B3EE002B0DD9 /* Roboto-Regular.ttf */,
+				881CEA10257D104100764AF5 /* Roboto-Medium.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -283,6 +329,7 @@
 				88AA2DF92577F260002B0DD9 /* UIButton+Ex.swift */,
 				88AA2E55257A7BED002B0DD9 /* UITapGesture+Ex.swift */,
 				88AA2E59257A99B8002B0DD9 /* String+Ex.swift */,
+				881CEA04257CFD4D00764AF5 /* UIViewController+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -392,13 +439,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881CEA11257D104100764AF5 /* Roboto-Medium.ttf in Resources */,
 				88AA2DEA2577E272002B0DD9 /* Localizable.strings in Resources */,
 				88AA2DD32577B3E0002B0DD9 /* Commissioner-Medium.ttf in Resources */,
 				88AA2D9025778AA5002B0DD9 /* LaunchScreen.storyboard in Resources */,
 				88AA2DF72577F200002B0DD9 /* Colors.xcassets in Resources */,
 				88AA2DD62577B3EE002B0DD9 /* Roboto-Regular.ttf in Resources */,
 				88AA2D8D25778AA5002B0DD9 /* Assets.xcassets in Resources */,
+				88497420257CE597001EAC2A /* Steps.storyboard in Resources */,
 				88AA2E152578157A002B0DD9 /* GoogleService-Info.plist in Resources */,
+				88497425257CE891001EAC2A /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,22 +469,32 @@
 				88497406257BC3D5001EAC2A /* UserDefaultsService.swift in Sources */,
 				88317AD0257B9E59004EF553 /* ConnectionErrorViewController.swift in Sources */,
 				88AA2DCB25779D79002B0DD9 /* LoginPresenter.swift in Sources */,
+				8849740C257CDBBC001EAC2A /* StepOneViewController.swift in Sources */,
+				881CEA08257D021A00764AF5 /* StepThreeViewController.swift in Sources */,
 				88317AC4257B747F004EF553 /* RegisterService.swift in Sources */,
+				881CEA14257D1E9B00764AF5 /* StepFiveViewController.swift in Sources */,
 				88AA2DF12577E789002B0DD9 /* UILabel+Ex.swift in Sources */,
 				88AA2E53257A7966002B0DD9 /* PrivacyViewController.swift in Sources */,
 				88AA2D8425778AA4002B0DD9 /* AppDelegate.swift in Sources */,
 				88AA2E2625781799002B0DD9 /* RegisterPresenter.swift in Sources */,
 				88AA2DC825779D18002B0DD9 /* LoginViewController.swift in Sources */,
 				88AA2DA525778FE3002B0DD9 /* Assembly.swift in Sources */,
+				8849741C257CE0E1001EAC2A /* UserInfo.swift in Sources */,
+				881CEA17257D288500764AF5 /* StepSixViewController.swift in Sources */,
 				88AA2DA8257790EA002B0DD9 /* MainViewController.swift in Sources */,
 				88AA2DFA2577F260002B0DD9 /* UIButton+Ex.swift in Sources */,
 				88AA2E4F257A42F7002B0DD9 /* RegistrationView.swift in Sources */,
 				88AA2DD92577B424002B0DD9 /* Fonts.swift in Sources */,
+				88497428257CF2A1001EAC2A /* StepTwoViewController.swift in Sources */,
 				88AA2E2225781763002B0DD9 /* RegisterViewController.swift in Sources */,
 				88AA2E56257A7BED002B0DD9 /* UITapGesture+Ex.swift in Sources */,
+				881CEA0B257D0BAC00764AF5 /* UserData.swift in Sources */,
+				881CEA1A257D2C3D00764AF5 /* StepSevenViewController.swift in Sources */,
+				881CEA0E257D0F6B00764AF5 /* StepFourViewController.swift in Sources */,
 				88AA2DCE2577A76F002B0DD9 /* Assets.swift in Sources */,
 				88AA2E5A257A99B8002B0DD9 /* String+Ex.swift in Sources */,
 				88AA2DDE2577B66C002B0DD9 /* UIView+Ex.swift in Sources */,
+				881CEA05257CFD4D00764AF5 /* UIViewController+Ex.swift in Sources */,
 				88AA2DC225779CB0002B0DD9 /* LoginContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

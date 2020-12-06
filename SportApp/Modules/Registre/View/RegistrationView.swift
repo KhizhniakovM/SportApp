@@ -32,7 +32,7 @@ final class RegistrationView: UIView {
         let label = UILabel()
         label.text = NSLocalizedString("regName", comment: "")
         label.textColor = .gray
-        label.font = Font.main.make(15)
+        label.font = Font.mainRegular.make(15)
         label.alpha = 0
         return label
     }()
@@ -41,7 +41,7 @@ final class RegistrationView: UIView {
         textField.borderStyle = .none
         textField.placeholder = NSLocalizedString("regName", comment: "")
         textField.textColor = .black
-        textField.font = Font.main.make(17.5)
+        textField.font = Font.mainRegular.make(17.5)
         textField.tag = 0
         return textField
     }()
@@ -66,7 +66,7 @@ final class RegistrationView: UIView {
         let label = UILabel()
         label.text = NSLocalizedString("regMail", comment: "")
         label.textColor = .gray
-        label.font = Font.main.make(15)
+        label.font = Font.mainRegular.make(15)
         label.alpha = 0
         return label
     }()
@@ -75,7 +75,7 @@ final class RegistrationView: UIView {
         textField.borderStyle = .none
         textField.placeholder = NSLocalizedString("regMail", comment: "")
         textField.textColor = .black
-        textField.font = Font.main.make(17.5)
+        textField.font = Font.mainRegular.make(17.5)
         textField.tag = 1
         textField.keyboardType = .emailAddress
         return textField
@@ -90,7 +90,7 @@ final class RegistrationView: UIView {
         let label = UILabel()
         label.text = NSLocalizedString("regMailError", comment: "")
         label.textColor = .error
-        label.font = Font.main.make(12)
+        label.font = Font.mainRegular.make(12)
         label.alpha = 0
         return label
     }()
@@ -105,7 +105,7 @@ final class RegistrationView: UIView {
         let label = UILabel()
         label.text = NSLocalizedString("regPass", comment: "")
         label.textColor = .gray
-        label.font = Font.main.make(15)
+        label.font = Font.mainRegular.make(15)
         label.alpha = 0
         return label
     }()
@@ -114,7 +114,7 @@ final class RegistrationView: UIView {
         textField.borderStyle = .none
         textField.placeholder = NSLocalizedString("regPass", comment: "")
         textField.textColor = .black
-        textField.font = Font.main.make(17.5)
+        textField.font = Font.mainRegular.make(17.5)
         textField.tag = 2
         textField.isSecureTextEntry = true
         return textField
@@ -129,7 +129,7 @@ final class RegistrationView: UIView {
         let label = UILabel()
         label.text = NSLocalizedString("regPassError", comment: "")
         label.textColor = .error
-        label.font = Font.main.make(12)
+        label.font = Font.mainRegular.make(12)
         label.alpha = 0
         return label
     }()
@@ -143,7 +143,7 @@ final class RegistrationView: UIView {
     lazy private var privacyLabel: UILabel = {
         let label = UILabel()
         label.isUserInteractionEnabled = true
-        label.font = Font.main.make(17.5)
+        label.font = Font.mainRegular.make(17.5)
         label.textColor = .black
         label.numberOfLines = 2
         

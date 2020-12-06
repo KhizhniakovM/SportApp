@@ -23,12 +23,13 @@ final class RegisterPresenter: RegisterPresenterProtocol {
     // MARK: - Methods
     func tapContinueButton(name: String, mail: String, pass: String) {
         networkService.registerService?.mailRegistration(name: name, mail: mail, pass: pass, completion: { [weak self] (result) in
+            guard let self = self else { return }
             switch result {
             case .success(let id):
                 UserDefaultsService.save(id: id, name: name, mail: mail)
-                
+//                self.router
             case .failure(_):
-                self?.view?.showRegistrationError()
+                self.view?.showRegistrationError()
             }
         })
     }

@@ -27,6 +27,7 @@ enum ViewControllers {
     case main
     case register(networkService: NetworkServiceProtocol)
     case privacy
+    case steps
 }
 
 // MARK: - Implementation
@@ -63,6 +64,11 @@ class Router: RouterProtocol {
             viewController = assembly.createRegister(router: self, networkService: networkService)
         case .privacy:
             viewController = assembly.createPrivacy()
+            navigationController?.present(viewController, animated: true, completion: nil)
+            return
+        case .steps:
+            viewController = assembly.createSteps()
+            viewController.modalPresentationStyle = .fullScreen
             navigationController?.present(viewController, animated: true, completion: nil)
             return
         }

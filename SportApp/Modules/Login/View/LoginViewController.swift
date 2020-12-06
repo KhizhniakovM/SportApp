@@ -41,7 +41,7 @@ final class LoginViewController: UIViewController {
     lazy private var orLabel: UILabel = {
         let label = UILabel()
         label.text = NSLocalizedString("or", comment: "")
-        label.font = Font.main.make(17.5)
+        label.font = Font.mainRegular.make(17.5)
         label.textColor = .white
         label.textAlignment = .center
         return label
@@ -57,7 +57,7 @@ final class LoginViewController: UIViewController {
         let label = UILabel()
         label.adjustsFontSizeToFitWidth = true
         label.text = NSLocalizedString("haveAccount", comment: "")
-        label.font = Font.main.make(17.5)
+        label.font = Font.mainRegular.make(17.5)
         label.textColor = .white
         label.textAlignment = .center
         return label
