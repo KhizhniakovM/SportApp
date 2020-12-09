@@ -28,6 +28,7 @@ enum ViewControllers {
     case register(networkService: NetworkServiceProtocol)
     case privacy
     case steps
+    case subscription
 }
 
 // MARK: - Implementation
@@ -68,6 +69,11 @@ class Router: RouterProtocol {
             return
         case .steps:
             viewController = assembly.createSteps()
+            viewController.modalPresentationStyle = .fullScreen
+            navigationController?.present(viewController, animated: true, completion: nil)
+            return
+        case .subscription:
+            viewController = assembly.createSubscription()
             viewController.modalPresentationStyle = .fullScreen
             navigationController?.present(viewController, animated: true, completion: nil)
             return

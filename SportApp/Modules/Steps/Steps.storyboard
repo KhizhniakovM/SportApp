@@ -896,11 +896,71 @@
                         <outlet property="questionLabel" destination="63x-qZ-QpM" id="YVb-mE-gI0"/>
                         <outlet property="resultLabel" destination="XZH-XC-6SD" id="B8v-nw-YLt"/>
                         <outlet property="slider" destination="mYu-3D-UUx" id="t2t-y6-nxp"/>
+                        <segue destination="oau-eH-i4g" kind="show" identifier="lastStep" id="4dZ-2n-7Ad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8T-0S-Zoz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4545" y="70"/>
+        </scene>
+        <!--Final Step View Controller-->
+        <scene sceneID="TQP-BB-EjC">
+            <objects>
+                <viewController id="oau-eH-i4g" customClass="FinalStepViewController" customModule="SportApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ngq-N6-Td1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34A-AV-QaP">
+                                <rect key="frame" x="30" y="238" width="354" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Commissioner-Medium" family="Commissioner" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ym9-P9-aJu">
+                                <rect key="frame" x="20" y="765" width="374" height="67"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapContinueButton:" destination="oau-eH-i4g" eventType="touchUpInside" id="o4F-aq-chw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg6-Bp-Hf0">
+                                <rect key="frame" x="30" y="311.5" width="334" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Commissioner-Medium" family="Commissioner" pointSize="20"/>
+                                <color key="textColor" name="gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bd9-nm-DMZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bd9-nm-DMZ" firstAttribute="trailing" secondItem="34A-AV-QaP" secondAttribute="trailing" constant="30" id="2e2-Ia-Nno"/>
+                            <constraint firstItem="34A-AV-QaP" firstAttribute="leading" secondItem="bd9-nm-DMZ" secondAttribute="leading" constant="30" id="9Uw-tV-EGV"/>
+                            <constraint firstItem="ym9-P9-aJu" firstAttribute="leading" secondItem="bd9-nm-DMZ" secondAttribute="leading" constant="20" id="L2a-6Q-nLN"/>
+                            <constraint firstItem="ym9-P9-aJu" firstAttribute="height" secondItem="ngq-N6-Td1" secondAttribute="height" multiplier="0.075" id="OF1-C0-9dm"/>
+                            <constraint firstItem="bd9-nm-DMZ" firstAttribute="bottom" secondItem="ym9-P9-aJu" secondAttribute="bottom" constant="30" id="Rmg-QW-k8I"/>
+                            <constraint firstItem="34A-AV-QaP" firstAttribute="centerX" secondItem="ngq-N6-Td1" secondAttribute="centerX" id="ZMs-1o-4Ag"/>
+                            <constraint firstItem="Zg6-Bp-Hf0" firstAttribute="top" secondItem="34A-AV-QaP" secondAttribute="bottom" constant="50" id="eGa-Ty-SdM"/>
+                            <constraint firstItem="Zg6-Bp-Hf0" firstAttribute="leading" secondItem="bd9-nm-DMZ" secondAttribute="leading" constant="30" id="glb-j3-vaj"/>
+                            <constraint firstItem="bd9-nm-DMZ" firstAttribute="trailing" secondItem="Zg6-Bp-Hf0" secondAttribute="trailing" constant="50" id="tCu-Cj-Z31"/>
+                            <constraint firstItem="bd9-nm-DMZ" firstAttribute="trailing" secondItem="ym9-P9-aJu" secondAttribute="trailing" constant="20" id="u8L-N8-p4f"/>
+                            <constraint firstItem="34A-AV-QaP" firstAttribute="top" secondItem="bd9-nm-DMZ" secondAttribute="top" constant="150" id="vJx-2s-bG0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Ta-a1-eZl"/>
+                    <connections>
+                        <outlet property="congratulations" destination="34A-AV-QaP" id="Ryf-me-hiB"/>
+                        <outlet property="continueButton" destination="ym9-P9-aJu" id="ctH-M1-aqC"/>
+                        <outlet property="descriptionText" destination="Zg6-Bp-Hf0" id="1ba-So-2DZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Bd-Yh-266" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5338" y="70"/>
         </scene>
     </scenes>
     <resources>

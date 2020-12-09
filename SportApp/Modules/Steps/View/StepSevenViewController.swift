@@ -54,7 +54,7 @@ class StepSevenViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func tapContinueButton(_ sender: UIButton) {
-        print(userInfo)
+        performSegue(withIdentifier: "lastStep", sender: nil)
     }
     // MARK: - @objc methods
     @objc
@@ -82,6 +82,12 @@ class StepSevenViewController: UIViewController {
             resultLabel.text = NSLocalizedString("levelProDescription", comment: "")
         default:
             fatalError()
+        }
+    }
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? FinalStepViewController {
+            vc.userInfo = self.userInfo
         }
     }
 }

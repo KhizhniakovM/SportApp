@@ -15,6 +15,8 @@ enum Assets: String {
     case back
     case exit
     
+    case pageOne, pageTwo, pageThree
+    
     func image() -> UIImage? {
         return UIImage(named: self.rawValue)
     }

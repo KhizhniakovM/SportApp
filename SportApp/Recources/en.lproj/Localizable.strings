@@ -9,6 +9,9 @@
 "or" = "or";
 "continue" = "Continue";
 "cancel" = "Cancel";
+"start" = "Start";
+"try" = "Try it now!";
+"trySeven" = "Try 7 days for free!";
 
 "haveAccount" = "Already have an account?";
 "signInFB" = "Continue with Facebook";
@@ -71,3 +74,16 @@
 "levelMediumDescription" = "I train 2-3 times a week";
 "levelAdvancedDescription" = "I train 4-5 times a week";
 "levelProDescription" = "I train 6-7 times a week";
+
+"congratulations" = "Congratulations! \nYou are logged in!";
+"congDesc" = "You can be sure that training with Oxana Fit is the best thing you can do with your body";
+
+"pageOne" = "Training sessions from the European fitness champion";
+"pageTwo" = "Training programs that help you achieve your goals";
+"pageThree" = "This app will help you track your training progress";
+"pageFour" = "";
+"pageFive" = "";
+
+"firstDateLabel" = "1 month";
+"secondDateLabel" = "3 monthes";
+"thirdDateLabel" = "1 year";
