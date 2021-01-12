@@ -70,13 +70,15 @@ class Router: RouterProtocol {
         case .steps:
             viewController = assembly.createSteps()
             viewController.modalPresentationStyle = .fullScreen
+            ((viewController as! UINavigationController).viewControllers[0] as! StepOneViewController).router = self
             navigationController?.present(viewController, animated: true, completion: nil)
             return
         case .subscription:
             viewController = assembly.createSubscription()
-            viewController.modalPresentationStyle = .fullScreen
-            navigationController?.present(viewController, animated: true, completion: nil)
-            return
+            (viewController as! PageViewController).router = self
+//            viewController.modalPresentationStyle = .fullScreen
+//            navigationController?.present(viewController, animated: true, completion: nil)
+//            return
         }
         
         navigationController?.pushViewController(viewController, animated: true)

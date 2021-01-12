@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let assembly = Assembly()
         let networkService = assembly.createNetworkService()
         networkService.configureFirebase()
-//        try? Auth.auth().signOut()
+        try? Auth.auth().signOut()
         
         let navigationController = UINavigationController()
         let router = Router(navigationController: navigationController, assembly: assembly)

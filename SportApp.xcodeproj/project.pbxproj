@@ -277,7 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				88AA2DC025779C94002B0DD9 /* Login */,
-				88AA2E1725781673002B0DD9 /* Registre */,
+				88AA2E1725781673002B0DD9 /* Register */,
 				88497409257BCB69001EAC2A /* Steps */,
 				881CEA8B257FE71900764AF5 /* Subscription */,
 				88AA2DAD2577919B002B0DD9 /* Main */,
@@ -362,7 +362,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		88AA2E1725781673002B0DD9 /* Registre */ = {
+		88AA2E1725781673002B0DD9 /* Register */ = {
 			isa = PBXGroup;
 			children = (
 				88AA2E51257A7952002B0DD9 /* Privacy */,
@@ -370,7 +370,7 @@
 				88AA2E1F2578174C002B0DD9 /* View */,
 				88AA2E2025781751002B0DD9 /* Presenter */,
 			);
-			path = Registre;
+			path = Register;
 			sourceTree = "<group>";
 		};
 		88AA2E1F2578174C002B0DD9 /* View */ = {

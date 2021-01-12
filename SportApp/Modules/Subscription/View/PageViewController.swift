@@ -13,6 +13,7 @@ class PageViewController: UIViewController {
         case first, second, third, fourth, fifth
     }
     // MARK: - Properties
+    var router: RouterProtocol!
     var currentPage: Int = 0
     // MARK: - UI
     @IBOutlet weak var image: UIImageView!
@@ -84,5 +85,11 @@ class PageViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func tapStartButton(_ sender: UIButton) {
         performSegue(withIdentifier: "sub", sender: nil)
+    }
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? SubscriptionViewController {
+            vc.router = router
+        }
     }
 }

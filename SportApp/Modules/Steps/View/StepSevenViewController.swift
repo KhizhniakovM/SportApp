@@ -9,6 +9,7 @@ import UIKit
 
 class StepSevenViewController: UIViewController {
     // MARK: - Properties
+    var router: RouterProtocol!
     var userInfo: [String: Any]!
     
     // MARK: - UI
@@ -88,6 +89,7 @@ class StepSevenViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? FinalStepViewController {
             vc.userInfo = self.userInfo
+            vc.router = router
         }
     }
 }

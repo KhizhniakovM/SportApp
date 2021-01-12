@@ -66,8 +66,6 @@ class ConnectionErrorViewController: UIViewController {
     }
     private func setupUI() {
         self.view.backgroundColor = .white
-        
-        
     }
     
     // MARK: - @objc methods

@@ -9,6 +9,7 @@ import UIKit
 
 class StepOneViewController: UIViewController {
     // MARK: - Properties
+    var router: RouterProtocol!
     var userInfo: [String: Any] = [:]
     // MARK: - UI
     @IBOutlet weak var backButton: UIBarButtonItem!
@@ -69,6 +70,7 @@ class StepOneViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? StepTwoViewController {
             vc.userInfo = self.userInfo
+            vc.router = router
         }
     }
 }

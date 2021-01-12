@@ -9,6 +9,7 @@ import UIKit
 
 class FinalStepViewController: UIViewController {
     // MARK: - Properties
+    var router: RouterProtocol!
     var userInfo: [String: Any]!
     
     // MARK: - UI
@@ -38,5 +39,10 @@ class FinalStepViewController: UIViewController {
     }
     // MARK: - Lifecycle
     @IBAction func tapContinueButton(_ sender: UIButton) {
+        // TODO: Save user info
+        let storyboard = UIStoryboard(name: "Subscription", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "page") as? PageViewController else { return }
+        vc.router = router
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

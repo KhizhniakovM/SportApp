@@ -9,6 +9,7 @@ import UIKit
 
 class StepFourViewController: UIViewController {
     // MARK: - Properties
+    var router: RouterProtocol!
     var userInfo: [String: Any]!
     // MARK: - UI
     @IBOutlet weak var questionLabel: UILabel!
@@ -83,6 +84,7 @@ class StepFourViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? StepFiveViewController {
             vc.userInfo = self.userInfo
+            vc.router = router
         }
     }
 }

@@ -13,6 +13,7 @@ class SubscriptionViewController: UIViewController {
         case month, season, year
     }
     // MARK: - Properties
+    var router: RouterProtocol!
     var currentDate: Date? {
         didSet {
             enable(button: buyButton)
@@ -98,5 +99,6 @@ class SubscriptionViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func tapBuyButton(_ sender: UIButton) {
+        router.push(destination: .main)
     }
 }
