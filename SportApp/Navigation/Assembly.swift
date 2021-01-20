@@ -9,7 +9,7 @@ import UIKit
 
 protocol AssemblyProtocol {
     func createConnectionError() -> UIViewController
-    func createMain(router: RouterProtocol) -> UIViewController
+    func createMain(router: RouterProtocol, networkService: NetworkServiceProtocol) -> UITabBarController
     func createLogin(router: RouterProtocol, networkService: NetworkServiceProtocol) -> UIViewController
     func createRegister(router: RouterProtocol, networkService: NetworkServiceProtocol) -> UIViewController
     func createPrivacy() -> UIViewController
@@ -19,6 +19,7 @@ protocol AssemblyProtocol {
     func createNetworkService() -> NetworkServiceProtocol
     func createRegisterService() -> RegisterServiceProtocol
     func createConnectionService() -> ConnectionServiceProtocol
+    func createDatabaseService() -> FirebaseDatabaseServiceProtocol
 }
 
 class Assembly: AssemblyProtocol {
@@ -41,10 +42,9 @@ class Assembly: AssemblyProtocol {
         view.presenter = presenter
         return view
     }
-    func createMain(router: RouterProtocol) -> UIViewController {
+    func createMain(router: RouterProtocol, networkService: NetworkServiceProtocol) -> UITabBarController {
         let view = MainViewController()
-        let presenter = MainPresenter(view: view, router: router)
-        view.presenter = presenter
+        view.networkService = networkService
         return view
     }
     func createSteps() -> UIViewController {
@@ -60,6 +60,7 @@ class Assembly: AssemblyProtocol {
         let networkService = NetworkService()
         networkService.connectionService = createConnectionService()
         networkService.registerService = createRegisterService()
+        networkService.databaseService = createDatabaseService()
         return networkService
     }
     func createRegisterService() -> RegisterServiceProtocol {
@@ -67,5 +68,8 @@ class Assembly: AssemblyProtocol {
     }
     func createConnectionService() -> ConnectionServiceProtocol {
         return ConnectionService()
+    }
+    func createDatabaseService() -> FirebaseDatabaseServiceProtocol {
+        return FirebaseDatabaseService()
     }
 }

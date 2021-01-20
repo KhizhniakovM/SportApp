@@ -30,9 +30,27 @@ extension UIViewController {
         navigationBar.titleTextAttributes = [NSAttributedString.Key.font: Font.header.make(17.5),
                                              NSAttributedString.Key.foregroundColor: UIColor.black]
     }
+    func setupNavigationBar(with title: String) {
+        guard let navigationBar = self.navigationController?.navigationBar else { return }
+        navigationItem.title = title
+        navigationBar.barStyle = .blackOpaque
+        navigationBar.barTintColor = .white
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.font: Font.header.make(17.5),
+                                             NSAttributedString.Key.foregroundColor: UIColor.black]
+    }
+    func setupBackButton() {
+        guard let navigationBar = self.navigationController?.navigationBar else { return }
+        navigationBar.backIndicatorImage = Assets.back.image()
+        navigationBar.tintColor = .black
+        navigationBar.backIndicatorTransitionMaskImage = Assets.back.image()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    
     func setupCornerRadiusFor(_ button: UIButton) {
         button.clipsToBounds = true
-        button.layer.cornerRadius = button.frame.height / 2
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = button.bounds.height / 2
     }
     func setupCornerRadiusFor(_ view: UIView, _ radius: CGFloat) {
         view.layer.cornerRadius = radius

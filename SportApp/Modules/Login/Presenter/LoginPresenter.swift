@@ -23,9 +23,10 @@ final class LoginPresenter: LoginPresenterProtocol {
     
     // MARK: - Methods
     func tapEmailButton() {
-        router.push(destination: .register(networkService: networkService))
+//        router.push(destination: .register(networkService: networkService))
 //        router.push(destination: .steps)
 //        router.push(destination: .subscription)
+        router.push(destination: .main(networkService: networkService))
     }
     func tapFbButton() {
         

@@ -27,7 +27,7 @@ final class RegisterPresenter: RegisterPresenterProtocol {
 //            switch result {
 //            case .success(let id):
 //                UserDefaultsService.save(id: id, name: name, mail: mail)
-                self.router.push(destination: .steps)
+        self.router.push(destination: .steps(networkService: networkService))
 //            case .failure(_):
 //                self.view?.showRegistrationError()
 //            }

@@ -14,6 +14,7 @@ class SubscriptionViewController: UIViewController {
     }
     // MARK: - Properties
     var router: RouterProtocol!
+    var networkService: NetworkServiceProtocol!
     var currentDate: Date? {
         didSet {
             enable(button: buyButton)
@@ -99,6 +100,6 @@ class SubscriptionViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func tapBuyButton(_ sender: UIButton) {
-        router.push(destination: .main)
+        router.push(destination: .main(networkService: networkService))
     }
 }

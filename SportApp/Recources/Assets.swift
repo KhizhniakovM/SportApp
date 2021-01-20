@@ -8,14 +8,13 @@
 import UIKit
 
 enum Assets: String {
-    case loginBack
-    case loginLogo
-    case logoFb
-    case logoApple
-    case back
-    case exit
+    case loginBack, loginLogo, logoFb, logoApple
+    case back, exit, exitVideo
     
     case pageOne, pageTwo, pageThree
+    case iconPrograms, iconExercises, iconStatistics, iconProfile
+    case fire, time
+    case play
     
     func image() -> UIImage? {
         return UIImage(named: self.rawValue)

@@ -77,6 +77,9 @@ final class LoginViewController: UIViewController {
         stack.axis = .vertical
         return stack
     }()
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {

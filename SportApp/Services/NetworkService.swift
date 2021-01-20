@@ -17,6 +17,7 @@ enum NetworkError: Error {
 protocol NetworkServiceProtocol: class {
     var connectionService: ConnectionServiceProtocol? { get }
     var registerService: RegisterServiceProtocol? { get }
+    var databaseService: FirebaseDatabaseServiceProtocol? { get }
     
     @discardableResult
     func configureFirebase() -> Result<Bool, NetworkError>
@@ -28,6 +29,7 @@ final class NetworkService: NetworkServiceProtocol {
     // MARK: - Properties
     var connectionService: ConnectionServiceProtocol?
     var registerService: RegisterServiceProtocol?
+    var databaseService: FirebaseDatabaseServiceProtocol?
     
     // MARK: - Methods
     @discardableResult

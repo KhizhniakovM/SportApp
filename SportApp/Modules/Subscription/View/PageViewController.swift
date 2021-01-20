@@ -14,6 +14,7 @@ class PageViewController: UIViewController {
     }
     // MARK: - Properties
     var router: RouterProtocol!
+    var networkService: NetworkServiceProtocol!
     var currentPage: Int = 0
     // MARK: - UI
     @IBOutlet weak var image: UIImageView!
@@ -90,6 +91,7 @@ class PageViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? SubscriptionViewController {
             vc.router = router
+            vc.networkService = networkService
         }
     }
 }

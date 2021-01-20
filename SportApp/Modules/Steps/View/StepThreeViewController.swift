@@ -10,6 +10,7 @@ import UIKit
 class StepThreeViewController: UIViewController {
     // MARK: - Properties
     var router: RouterProtocol!
+    var networkService: NetworkServiceProtocol!
     var userInfo: [String: Any]!
 
     // MARK: - UI
@@ -60,6 +61,7 @@ class StepThreeViewController: UIViewController {
         if let vc = segue.destination as? StepFourViewController {
             vc.userInfo = self.userInfo
             vc.router = router
+            vc.networkService = networkService
         }
     }
 }

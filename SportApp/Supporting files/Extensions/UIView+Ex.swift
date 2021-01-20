@@ -9,6 +9,11 @@ import UIKit
 import SnapKit
 
 extension UIView {
+    static func line() -> UIView {
+        let view = UIView()
+        view.backgroundColor = .gray
+        return view
+    }
     static func makeLabelViewForButton(_ image: UIImage?, _ label: UILabel) -> PassThroughView {
         let view = PassThroughView()
         let imageView = UIImageView(image: image)

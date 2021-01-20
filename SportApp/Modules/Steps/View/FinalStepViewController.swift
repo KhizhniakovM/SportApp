@@ -10,6 +10,7 @@ import UIKit
 class FinalStepViewController: UIViewController {
     // MARK: - Properties
     var router: RouterProtocol!
+    var networkService: NetworkServiceProtocol!
     var userInfo: [String: Any]!
     
     // MARK: - UI
@@ -43,6 +44,7 @@ class FinalStepViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Subscription", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "page") as? PageViewController else { return }
         vc.router = router
+        vc.networkService = networkService
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

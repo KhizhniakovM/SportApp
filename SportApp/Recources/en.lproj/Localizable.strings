@@ -12,6 +12,7 @@
 "start" = "Start";
 "try" = "Try it now!";
 "trySeven" = "Try 7 days for free!";
+"more" = "More";
 
 "haveAccount" = "Already have an account?";
 "signInFB" = "Continue with Facebook";
@@ -87,3 +88,16 @@
 "firstDateLabel" = "1 month";
 "secondDateLabel" = "3 monthes";
 "thirdDateLabel" = "1 year";
+
+"iconPrograms" = "Programs";
+"iconExercises" = "Exercises";
+"iconStatistics" = "Statistics";
+"iconProfile" = "Profile";
+
+"trainingPrograms" = "Training Programs";
+"availablePrograms" = "Available Programs";
+"startProgram" = "Start Training";
+"ex" = "Exercises";
+
+"courseName" = "Basic course for beginners";
+

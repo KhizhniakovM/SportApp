@@ -24,11 +24,11 @@ protocol RouterProtocol: RouterMain {
 
 // MARK: - Enum of vc
 enum ViewControllers {
-    case main
+    case main(networkService: NetworkServiceProtocol)
     case register(networkService: NetworkServiceProtocol)
     case privacy
-    case steps
-    case subscription
+    case steps(networkService: NetworkServiceProtocol)
+    case subscription(networkService: NetworkServiceProtocol)
 }
 
 // MARK: - Implementation
@@ -50,37 +50,38 @@ class Router: RouterProtocol {
         navigationController.viewControllers = [loginViewController]
     }
     func mainViewController(with networkService: NetworkServiceProtocol) {
-//        guard let navigationController = navigationController else { return }
-//        guard let loginViewController = assembly?.createLogin(router: self, networkService: networkService) else { return }
-//        navigationController.viewControllers = [loginViewController]
+        guard let navigationController = navigationController else { return }
+        guard let mainViewController = assembly?.createMain(router: self, networkService: networkService) else { return }
+        navigationController.viewControllers = [mainViewController]
     }
     func push(destination viewControllers: ViewControllers) {
         guard let assembly = assembly else { return }
         var viewController: UIViewController
         
         switch viewControllers {
-        case .main:
-            viewController = assembly.createMain(router: self)
+        case .main(let networkService):
+            viewController = assembly.createMain(router: self, networkService: networkService)
         case .register(let networkService):
             viewController = assembly.createRegister(router: self, networkService: networkService)
         case .privacy:
             viewController = assembly.createPrivacy()
             navigationController?.present(viewController, animated: true, completion: nil)
             return
-        case .steps:
+        case .steps(let networkService):
             viewController = assembly.createSteps()
             viewController.modalPresentationStyle = .fullScreen
             ((viewController as! UINavigationController).viewControllers[0] as! StepOneViewController).router = self
+            ((viewController as! UINavigationController).viewControllers[0] as! StepOneViewController).networkService = networkService
             navigationController?.present(viewController, animated: true, completion: nil)
             return
-        case .subscription:
+        case .subscription(let networkService):
             viewController = assembly.createSubscription()
             (viewController as! PageViewController).router = self
-//            viewController.modalPresentationStyle = .fullScreen
-//            navigationController?.present(viewController, animated: true, completion: nil)
-//            return
+            (viewController as! PageViewController).networkService = networkService
+            viewController.modalPresentationStyle = .fullScreen
+            navigationController?.present(viewController, animated: true, completion: nil)
+            return
         }
-        
         navigationController?.pushViewController(viewController, animated: true)
     }
     
