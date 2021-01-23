@@ -22,6 +22,5 @@ struct Exercise {
     var lenght: Int
     
     var videoUrl: String
-    var fileUrl: String
     var previewUrl: String
 }

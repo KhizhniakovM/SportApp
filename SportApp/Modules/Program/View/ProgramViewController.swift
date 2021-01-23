@@ -160,23 +160,23 @@ extension ProgramViewController: ProgramViewProtocol {
         self.programDescription.text = program.description
     }
     func showExercise(ex: Exercise) {
-        let vc = VideoViewController(urls: [], time: ex.lenght)
+        let vc = VideoViewController(ex: ex.videoUrl, time: ex.lenght)
         vc.modalPresentationCapturesStatusBarAppearance = true
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true, completion: nil)
     }
-    func showProgram() {
-        let vc = VideoViewController()
-        vc.modalPresentationCapturesStatusBarAppearance = true
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overFullScreen
+    func showProgram(vc: UIViewController) {
         self.present(vc, animated: true, completion: nil)
     }
 }
 extension ProgramViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.showExercise(index: indexPath.row)
+        if presenter!.isDownloaded(index: indexPath.row) {
+            presenter?.showExercise(index: indexPath.row)
+        } else {
+            presenter?.downloadExercise(index: indexPath.row)
+        }
     }
 }
 extension ProgramViewController: UICollectionViewDataSource {

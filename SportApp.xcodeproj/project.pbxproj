@@ -45,7 +45,6 @@
 		88445A2B25B6E0CB00BFBCB1 /* ProgramPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88445A2A25B6E0CB00BFBCB1 /* ProgramPresenter.swift */; };
 		88445A2F25B6FD3A00BFBCB1 /* ProgramCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88445A2E25B6FD3A00BFBCB1 /* ProgramCollectionViewCell.swift */; };
 		88445A3225B818C700BFBCB1 /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88445A3125B818C700BFBCB1 /* PlayerService.swift */; };
-		88445A3525B81E7400BFBCB1 /* video.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 88445A3425B81E7400BFBCB1 /* video.MP4 */; };
 		88445A3825B82E3000BFBCB1 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88445A3725B82E3000BFBCB1 /* VideoViewController.swift */; };
 		88445A3F25B836DC00BFBCB1 /* VideoTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88445A3E25B836DC00BFBCB1 /* VideoTimer.swift */; };
 		88445A4225B8389300BFBCB1 /* Int+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88445A4125B8389300BFBCB1 /* Int+Ex.swift */; };
@@ -130,7 +129,6 @@
 		88445A2A25B6E0CB00BFBCB1 /* ProgramPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramPresenter.swift; sourceTree = "<group>"; };
 		88445A2E25B6FD3A00BFBCB1 /* ProgramCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCollectionViewCell.swift; sourceTree = "<group>"; };
 		88445A3125B818C700BFBCB1 /* PlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
-		88445A3425B81E7400BFBCB1 /* video.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.MP4; sourceTree = "<group>"; };
 		88445A3725B82E3000BFBCB1 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		88445A3E25B836DC00BFBCB1 /* VideoTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTimer.swift; sourceTree = "<group>"; };
 		88445A4125B8389300BFBCB1 /* Int+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ex.swift"; sourceTree = "<group>"; };
@@ -459,7 +457,6 @@
 		88AA2D9A25778ACD002B0DD9 /* Recources */ = {
 			isa = PBXGroup;
 			children = (
-				88445A3425B81E7400BFBCB1 /* video.MP4 */,
 				88AA2DCD2577A76F002B0DD9 /* Assets.swift */,
 				88AA2D8C25778AA5002B0DD9 /* Assets.xcassets */,
 				88AA2DD82577B424002B0DD9 /* Fonts.swift */,
@@ -673,7 +670,6 @@
 				88AA2DF72577F200002B0DD9 /* Colors.xcassets in Resources */,
 				88AA2DD62577B3EE002B0DD9 /* Roboto-Regular.ttf in Resources */,
 				88AA2D8D25778AA5002B0DD9 /* Assets.xcassets in Resources */,
-				88445A3525B81E7400BFBCB1 /* video.MP4 in Resources */,
 				881CEA8D257FE73400764AF5 /* Subscription.storyboard in Resources */,
 				88497420257CE597001EAC2A /* Steps.storyboard in Resources */,
 				88AA2E152578157A002B0DD9 /* GoogleService-Info.plist in Resources */,

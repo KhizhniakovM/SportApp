@@ -19,7 +19,7 @@ protocol AssemblyProtocol {
     func createNetworkService() -> NetworkServiceProtocol
     func createRegisterService() -> RegisterServiceProtocol
     func createConnectionService() -> ConnectionServiceProtocol
-    func createDatabaseService() -> FirebaseDatabaseServiceProtocol
+    func createDatabaseService() -> FirebaseServiceProtocol
 }
 
 class Assembly: AssemblyProtocol {
@@ -60,7 +60,7 @@ class Assembly: AssemblyProtocol {
         let networkService = NetworkService()
         networkService.connectionService = createConnectionService()
         networkService.registerService = createRegisterService()
-        networkService.databaseService = createDatabaseService()
+        networkService.firebaseService = createDatabaseService()
         return networkService
     }
     func createRegisterService() -> RegisterServiceProtocol {
@@ -69,7 +69,7 @@ class Assembly: AssemblyProtocol {
     func createConnectionService() -> ConnectionServiceProtocol {
         return ConnectionService()
     }
-    func createDatabaseService() -> FirebaseDatabaseServiceProtocol {
-        return FirebaseDatabaseService()
+    func createDatabaseService() -> FirebaseServiceProtocol {
+        return FirebaseService()
     }
 }

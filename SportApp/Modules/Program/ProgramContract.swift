@@ -5,11 +5,11 @@
 //  Created by Max Khizhniakov on 19.01.2021.
 //
 
-import Foundation
+import UIKit
 
 protocol ProgramViewProtocol: class {
     func showExercise(ex: Exercise)
-    func showProgram()
+    func showProgram(vc: UIViewController)
     func configure(with program: Program)
 }
 protocol ProgramPresenterProtocol: class {
@@ -19,4 +19,6 @@ protocol ProgramPresenterProtocol: class {
     
     func showExercise(index: Int)
     func showProgram()
+    func downloadExercise(index: Int)
+    func isDownloaded(index: Int) -> Bool
 }

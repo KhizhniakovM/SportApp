@@ -37,8 +37,6 @@ class VideoTimer: UIView {
         self.init(frame: .zero)
         self.time = time
         self.label.text = Int.toTime(time, formatter: formatter)
-        
-        self.startTimer()
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,7 +60,7 @@ class VideoTimer: UIView {
             $0.center.equalToSuperview()
         }
     }
-    private func startTimer() {
+    func startTimer() {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] (timer) in
             guard let self = self else { return }
             self.time -= 1

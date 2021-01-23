@@ -128,8 +128,7 @@ extension ProgramsViewController: UITableViewDataSource {
         cell.backImage.downloadImage(for: presenter?.programs[indexPath.row].imageUrl ?? "", ref: ref)
         cell.programLabel.text = presenter?.programs[indexPath.row].name
         (cell.calStack.arrangedSubviews[1] as? UILabel)?.text = "\(presenter?.programs[indexPath.row].cal ?? 0)" + " cal"
-        (cell.timeStack.arrangedSubviews[1] as? UILabel)?.text = "\(presenter?.programs[indexPath.row].time ?? 0)" + " min"
-        
+        (cell.timeStack.arrangedSubviews[1] as? UILabel)?.text = Int.toMin(presenter?.programs[indexPath.row].time ?? 0) + " min"
         cell.selectionStyle = .none
         return cell
     }

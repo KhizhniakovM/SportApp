@@ -19,7 +19,7 @@ final class ProgramsPresenter: ProgramsPresenterProtocol {
         self.view = view
         self.networkService = networkService
         
-        networkService.databaseService?.downloadProgramsList(completion: { [weak self] (programs) in
+        networkService.firebaseService?.downloadProgramsList(completion: { [weak self] (programs) in
             guard let self = self else { return }
             self.programs = programs
             

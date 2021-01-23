@@ -17,4 +17,11 @@ extension Int {
         if result.count == 2 { result = "0:\(result)" }
         return result
     }
+    static func toMin(_ interval: Int) -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.minute]
+        formatter.unitsStyle = .positional
+
+        return formatter.string(from: TimeInterval(interval))!
+    }
 }

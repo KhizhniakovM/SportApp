@@ -9,8 +9,10 @@ import UIKit
 
 class VideoViewController: UIViewController {
     // MARK: - Properties
-    var urls: [URL]?
-    var player: Player?
+    private var urls: [URL?] = []
+    private var player: Player?
+    private var currentVideo: Int = 0
+    private var repeatCounter: Int = 1
     
     // MARK: - UI
     private var timer: VideoTimer!
@@ -21,10 +23,27 @@ class VideoViewController: UIViewController {
         return button
     }()
     // MARK: - Initializers
-    convenience init(urls: [URL], time: Int) {
+    convenience init(ex: String, time: Int) {
         self.init(nibName: nil, bundle: nil)
         
-        self.urls = urls
+        let path = FileManager.default
+            .urls(for: .documentDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent(ex)
+        
+        urls.append(path)
+        
+        let timer = VideoTimer(time)
+        timer.delegate = self
+        self.timer = timer
+    }
+    convenience init(program: [String], time: Int) {
+        self.init(nibName: nil, bundle: nil)
+        
+        urls = program.map {
+            FileManager.default
+                .urls(for: .documentDirectory, in: .userDomainMask)[0]
+                .appendingPathComponent($0)
+        }
         
         let timer = VideoTimer(time)
         timer.delegate = self
@@ -42,7 +61,6 @@ class VideoViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        makePlaylistFrom(urls: urls)
         initPlayer()
         
         startVideo()
@@ -50,14 +68,8 @@ class VideoViewController: UIViewController {
         initUI()
         initLayout()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
 
     // MARK: - Methods
-    private func makePlaylistFrom(urls: [URL]?) {
-//        guard let urls = urls else { return }
-    }
     private func initPlayer() {
         self.player = Player()
         self.player?.playerDelegate = self
@@ -65,20 +77,19 @@ class VideoViewController: UIViewController {
         self.player?.view.frame = self.view.bounds
         self.player?.fillMode = .resizeAspectFill
         
-        self.player?.playbackLoops = true
+        self.player?.playerView.backgroundColor = .white
     }
     private func startVideo() {
         self.addChild(self.player!)
         self.view.addSubview((self.player?.view)!)
         self.player?.didMove(toParent: self)
         
-        let url = Bundle.main.url(forResource: "video", withExtension: "MP4")
-        self.player?.url = url
+        self.player?.url = urls[0]
         self.player?.playFromBeginning()
+        self.timer.startTimer()
     }
     // MARK: - Methods
     private func initUI() {
-        
         view.addSubview(timer)
         view.addSubview(exitButton)
     }
@@ -125,22 +136,20 @@ extension VideoViewController: PlayerDelegate {
     }
 }
 extension VideoViewController: PlayerPlaybackDelegate {
-    func playerCurrentTimeDidChange(_ player: Player) {
-        
-    }
-    
-    func playerPlaybackWillStartFromBeginning(_ player: Player) {
-        
-    }
-    
     func playerPlaybackDidEnd(_ player: Player) {
+        while repeatCounter < 2 {
+            player.playFromBeginning()
+            repeatCounter += 1
+            return
+        }
+        guard urls.count > currentVideo + 1 else { exit(); return }
+        repeatCounter = 1
+        currentVideo += 1
+        player.url = urls[currentVideo]
+        player.playFromBeginning()
     }
-    
-    func playerPlaybackWillLoop(_ player: Player) {
-        
-    }
-    
-    func playerPlaybackDidLoop(_ player: Player) {
-                
-    }
+    func playerCurrentTimeDidChange(_ player: Player) {}
+    func playerPlaybackWillStartFromBeginning(_ player: Player) {}
+    func playerPlaybackWillLoop(_ player: Player) {}
+    func playerPlaybackDidLoop(_ player: Player) {}
 }

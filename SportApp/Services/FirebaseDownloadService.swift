@@ -7,17 +7,21 @@
 
 import Foundation
 import FirebaseDatabase
-protocol FirebaseDatabaseServiceProtocol {
+import FirebaseStorage
+
+protocol FirebaseServiceProtocol {
     func downloadProgramsList(completion: @escaping (([Program]) -> Void))
+    func downloadVideo(_ name: String, completion: @escaping (() -> Void)) -> StorageDownloadTask
 }
 
-class FirebaseDatabaseService {
+class FirebaseService {
     // MARK: - Properties
-    lazy var ref = Database.database().reference()
+    lazy var databaseRef = Database.database().reference()
+    lazy var storageRef = Storage.storage().reference()
     
     // MARK: - Methods
     func downloadProgramsList(completion: @escaping (([Program]) -> Void)) {
-        ref.observeSingleEvent(of: .value) { (snapshot) in
+        databaseRef.observeSingleEvent(of: .value) { (snapshot) in
             guard let value = snapshot.value as? NSDictionary else { return }
             guard let programs = value["programs"] as? NSArray else { return }
             
@@ -42,14 +46,12 @@ class FirebaseDatabaseService {
                     let exerciseDescription = exercise["description"] as? NSString ?? ""
                     let lenght = exercise["lenght"] as? NSNumber ?? 0
                     let videoUrl = exercise["videoUrl"] as? NSString ?? ""
-                    let fileUrl = exercise["fileUrl"] as? NSString ?? ""
                     let previewUrl = exercise["previewUrl"] as? NSString ?? ""
                     
                     let resultEx = Exercise(name: String(exerciseName),
                                             description: String(exerciseDescription),
                                             lenght: Int(truncating: lenght),
                                             videoUrl: String(videoUrl),
-                                            fileUrl: String(fileUrl),
                                             previewUrl: String(previewUrl))
                     
                     programExercises.append(resultEx)
@@ -67,6 +69,14 @@ class FirebaseDatabaseService {
             return completion(result)
         }
     }
+    
+    func downloadVideo(_ name: String, completion: @escaping (() -> Void)) -> StorageDownloadTask {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        return storageRef.child(name).write(toFile: path.appendingPathComponent(name)) { (url, error) in
+            guard error == nil else { print(error!.localizedDescription); return }
+            completion()
+        }
+    }
 }
 // MARK: - Extensions
-extension FirebaseDatabaseService: FirebaseDatabaseServiceProtocol {}
+extension FirebaseService: FirebaseServiceProtocol {}
